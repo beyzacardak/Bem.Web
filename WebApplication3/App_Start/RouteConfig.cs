@@ -24,7 +24,11 @@ namespace WebApplication3
                 url: "sinema/nezaman/{action}",
                 defaults: new { controller = "Sinema" }
             );
-
+            routes.MapRoute(
+               name: "SinemaNeZamanAralik",
+               url: "sinema/nezaman/{Aralik1}/{Aralik2}",
+               defaults: new { controller = "Sinema", action= "Aralik" }
+           );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
