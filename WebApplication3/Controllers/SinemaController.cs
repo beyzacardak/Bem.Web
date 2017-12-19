@@ -89,5 +89,18 @@ namespace WebApplication3.Controllers
             }
             return View("~/views/_shared/guncel.cshtml", sinemaListesi);
         }
+        public ActionResult Aralik(DateTime tarih1, DateTime tarih2)
+        {
+            var sinemaListesi = new List<Etkinlik>();
+
+            foreach (var sinema in EtkinlikRepository.ListeyiDoldur())
+            {
+                if (sinema.EtkinlikTuru == EtkinlikTuru.Sinema && sinema.BaslangicTarihi <= DateTime.Now && sinema.BitisTarihi.Year == DateTime.Now.Year && sinema.BitisTarihi.Month == DateTime.Now.Month)
+                {
+                    sinemaListesi.Add(sinema);
+                }
+            }
+            return View("~/views/_shared/guncel.cshtml", sinemaListesi);
+        }
     }
 }
