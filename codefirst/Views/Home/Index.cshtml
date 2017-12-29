@@ -1,0 +1,23 @@
+﻿@model List<codefirst.Models.Doktorlar>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <ul>
+            @foreach(var a in Model)
+            {
+                <li>@a.Name</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

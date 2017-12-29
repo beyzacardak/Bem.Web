@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace deneme.Models
+namespace codefirst.Models
 {
     public class NobetYonetimDbContext: DbContext
     {
@@ -28,7 +28,7 @@ namespace deneme.Models
             
             base.OnModelCreating(modelBuilder);
             
-                    }
+        }
  
          public class DbInitializer : DropCreateDatabaseAlways<NobetYonetimDbContext>
         {

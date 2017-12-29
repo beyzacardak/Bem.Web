@@ -1,5 +1,5 @@
 ﻿using System;
-using deneme.Models;
+using codefirst.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,7 +14,7 @@ namespace deneme.Controllers
          {
              var context = new NobetYonetimDbContext();
              List<Doktorlar> Doktorlar = context.Doktorlar.ToList();
-             return View();
+             return View(Doktorlar);
          }
 }
 }
